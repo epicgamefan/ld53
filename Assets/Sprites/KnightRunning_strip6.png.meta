@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4441a228ee6c6ff449f7cfe56323e576
+guid: 6327eb28330c88d4394dbd6c90d56b39
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnightRunning_0
+      name: KnightRunning_strip6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da2c374ccae64a14695922e09df9c8f8
-      internalID: 322698770
+      spriteID: 2b0b1708b6ff81f429a8afc51b1d3283
+      internalID: 1773473730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightRunning_1
+      name: KnightRunning_strip6_1
       rect:
         serializedVersion: 2
         x: 26
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ef6f5ce70cbc7a469c8596835203dc3
-      internalID: -1636515212
+      spriteID: c5ca6d1f527e905448516bf19c8abb2c
+      internalID: 202863988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightRunning_2
+      name: KnightRunning_strip6_2
       rect:
         serializedVersion: 2
         x: 52
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 704f373db443ff94487a9509fafaa0cc
-      internalID: -448362133
+      spriteID: 5e07f00b3b379534192f8fcaa2794503
+      internalID: 1241735701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightRunning_3
+      name: KnightRunning_strip6_3
       rect:
         serializedVersion: 2
         x: 78
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c7523239a5f3364d8eb8e34646efc0a
-      internalID: -1651940546
+      spriteID: 093260ef29527294a870168beb269d04
+      internalID: -254401874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightRunning_4
+      name: KnightRunning_strip6_4
       rect:
         serializedVersion: 2
         x: 104
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f0d3eb6ea024145b80aa00e11b34eb
-      internalID: -342996847
+      spriteID: 6c3c144aff8f4e148abd5553e043a1ac
+      internalID: 2144432287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightRunning_5
+      name: KnightRunning_strip6_5
       rect:
         serializedVersion: 2
         x: 130
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74bf8e92fb97cf64797cf0fe9675f176
-      internalID: -1935493106
+      spriteID: c307148e9e1bb2742a428869f66f6dd2
+      internalID: 1947298888
       vertices: []
       indices: 
       edges: []
@@ -253,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      KnightRunning_0: 322698770
-      KnightRunning_1: -1636515212
-      KnightRunning_2: -448362133
-      KnightRunning_3: -1651940546
-      KnightRunning_4: -342996847
-      KnightRunning_5: -1935493106
+      KnightRunning_strip6_0: 1773473730
+      KnightRunning_strip6_1: 202863988
+      KnightRunning_strip6_2: 1241735701
+      KnightRunning_strip6_3: -254401874
+      KnightRunning_strip6_4: 2144432287
+      KnightRunning_strip6_5: 1947298888
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
