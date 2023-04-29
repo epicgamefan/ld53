@@ -34,12 +34,13 @@ public class Movement : MonoBehaviour
 
     public int side = 1;
 
-   // [Space]
-   // [Header("Polish")]
-    //public ParticleSystem dashParticle;
-    //public ParticleSystem jumpParticle;
-   // public ParticleSystem wallJumpParticle;
-   // public ParticleSystem slideParticle;
+   [Space]
+   [Header("Polish")]
+   public ParticleSystem dashParticle;
+   public ParticleSystem jumpParticle;
+   public ParticleSystem wallJumpParticle;
+   public ParticleSystem slideParticle;
+   public Color slideParticleColor;
 
     // Start is called before the first frame update
     void Start()
@@ -162,7 +163,7 @@ public class Movement : MonoBehaviour
 
         side = anim.sr.flipX ? -1 : 1;
 
-        //jumpParticle.Play();
+        jumpParticle.Play();
     }
 
     private void Dash(float x, float y)
@@ -188,7 +189,7 @@ public class Movement : MonoBehaviour
         StartCoroutine(GroundDash());
 // DOVirtual.Float(14, 0, .8f, RigidbodyDrag);
 
-       // dashParticle.Play();
+        dashParticle.Play();
         rb.gravityScale = 0;
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
@@ -196,7 +197,7 @@ public class Movement : MonoBehaviour
 
         yield return new WaitForSeconds(.3f);
 
-       // dashParticle.Stop();
+        dashParticle.Stop();
         rb.gravityScale = 3;
         GetComponent<BetterJumping>().enabled = true;
         wallJumped = false;
@@ -266,13 +267,14 @@ public class Movement : MonoBehaviour
 
     private void Jump(Vector2 dir, bool wall)
     {
-       // slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
-       // ParticleSystem particle = wall ? wallJumpParticle : jumpParticle;
+        slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
+        ParticleSystem particle = wall ? wallJumpParticle : jumpParticle;
+
 
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity += dir * jumpForce;
 
-       // particle.Play();
+        particle.Play();
     }
 
     IEnumerator DisableMovement(float time)
@@ -289,16 +291,16 @@ public class Movement : MonoBehaviour
 
     void WallParticle(float vertical)
     {
-       // var main = slideParticle.main;
+        var main = slideParticle.main;
 
         if (wallSlide || (wallGrab && vertical < 0))
         {
-        //    slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
-          //  main.startColor = Color.white;
+            slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
+            main.startColor = slideParticleColor;
         }
         else
         {
-         //   main.startColor = Color.clear;
+            main.startColor = Color.clear;
         }
     }
 
