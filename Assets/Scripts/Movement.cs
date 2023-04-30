@@ -88,8 +88,8 @@ public class Movement : MonoBehaviour
             {
                 isDying = false;
                 isSpawning = true;
-                GameObject startingPoint = GameObject.Find("StartingPoint");
-                transform.position = startingPoint.transform.position;
+
+                transform.position = spawnPosition;  
                 spawnPosition = transform.position;
             }
             else
@@ -105,20 +105,26 @@ public class Movement : MonoBehaviour
             canMove = false;
             isDying = true;
             deathPosition = transform.position;
+            GameObject startingPoint = GameObject.Find("StartingPoint");
+            Debug.Log("Postion: " + startingPoint.transform.position);
+            spawnPosition = startingPoint.transform.position;
             anim.SetHorizontalMovement(x, y, 0);
 
             return;
         }
 
-        Vector2 screenPostion = Camera.main.WorldToScreenPoint(transform.position);
-        if (screenPostion.y < 0)
-        {
-            canMove = false;
-            isDying = true;
-            deathPosition = transform.position;
-            anim.SetHorizontalMovement(x, y, 0);
-            return;
-        }
+        //Vector2 screenPostion = Camera.main.WorldToScreenPoint(transform.position);
+        //if (screenPostion.y < 0)
+        //{
+        //    canMove = false;
+        //    isDying = true;
+        //    deathPosition = transform.position;
+        //    GameObject startingPoint = GameObject.Find("StartingPoint");
+        //    Debug.Log("Postion: " + startingPoint.transform.position);
+        //    spawnPosition = startingPoint.transform.position;
+        //    anim.SetHorizontalMovement(x, y, 0);
+        //    return;
+        //}
 
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
