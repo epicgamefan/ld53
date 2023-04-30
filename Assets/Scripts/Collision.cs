@@ -7,6 +7,7 @@ public class Collision : MonoBehaviour
 
     [Header("Layers")]
     public LayerMask groundLayer;
+    public LayerMask spikesLayer;
 
     [Space]
 
@@ -15,6 +16,7 @@ public class Collision : MonoBehaviour
     public bool onRightWall;
     public bool onLeftWall;
     public int wallSide;
+    public bool onSpikes;
 
     [Space]
 
@@ -32,8 +34,14 @@ public class Collision : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {  
+    {
+
+        onSpikes = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, spikesLayer)
+            || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, spikesLayer)
+            || Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, spikesLayer);
+
         onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
+
         onWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer) 
             || Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer);
 
