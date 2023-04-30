@@ -204,6 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 0}
+  deathComplete: 0
+  spawnComplete: 0
 --- !u!1 &8505222471353351624
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,8 +220,6 @@ GameObject:
   - component: {fileID: 8505222471353351630}
   - component: {fileID: 8505222471353351629}
   - component: {fileID: 8505222471353351631}
-  - component: {fileID: 8505222471353351617}
-  - component: {fileID: 1184065994}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -307,6 +307,8 @@ MonoBehaviour:
   wallJumped: 0
   wallSlide: 0
   isDashing: 0
+  isDying: 0
+  isSpawning: 0
   side: 1
   dashParticle: {fileID: 2493371916806691055}
   jumpParticle: {fileID: 7076893971772189544}
@@ -355,30 +357,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 3
   lowJumpMultiplier: 8
---- !u!114 &8505222471353351617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8505222471353351624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6777d133db6d69b4f9f4d8b70f9e9a61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1184065994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8505222471353351624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12873219d1ed74c4dacb936bf0a46bfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8505222469645920817
 PrefabInstance:
   m_ObjectHideFlags: 0

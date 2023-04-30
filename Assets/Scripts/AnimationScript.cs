@@ -8,8 +8,15 @@ public class AnimationScript : MonoBehaviour
     private Animator anim;
     private Movement move;
     private Collision coll;
+
     [HideInInspector]
     public SpriteRenderer sr;
+
+    [HideInInspector]
+    public bool deathComplete;
+
+    [HideInInspector]
+    public bool spawnComplete;
 
     void Start()
     {
@@ -21,13 +28,20 @@ public class AnimationScript : MonoBehaviour
 
     void Update()
     {
-        anim.SetBool("onGround", coll.onGround);
-        anim.SetBool("onWall", coll.onWall);
-        anim.SetBool("onRightWall", coll.onRightWall);
-        anim.SetBool("wallGrab", move.wallGrab);
-        anim.SetBool("wallSlide", move.wallSlide);
-        anim.SetBool("canMove", move.canMove);
-        anim.SetBool("isDashing", move.isDashing);
+        
+        anim.SetBool("isDying", move.isDying);
+        anim.SetBool("isSpawning", move.isSpawning);
+
+        if (!move.isDying && !move.isSpawning)
+        {
+            anim.SetBool("onGround", coll.onGround);
+            anim.SetBool("onWall", coll.onWall);
+            anim.SetBool("onRightWall", coll.onRightWall);
+            anim.SetBool("wallGrab", move.wallGrab);
+            anim.SetBool("wallSlide", move.wallSlide);
+            anim.SetBool("canMove", move.canMove);
+            anim.SetBool("isDashing", move.isDashing);
+        }
 
     }
 

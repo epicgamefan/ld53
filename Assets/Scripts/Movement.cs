@@ -26,6 +26,8 @@ public class Movement : MonoBehaviour
     public bool wallJumped;
     public bool wallSlide;
     public bool isDashing;
+    public bool isDying;
+    public bool isSpawning;
 
     [Space]
 
@@ -41,6 +43,10 @@ public class Movement : MonoBehaviour
    public ParticleSystem wallJumpParticle;
    public ParticleSystem slideParticle;
    public Color slideParticleColor;
+
+    [Space]
+    private Vector2 deathPosition;
+    private Vector2 spawnPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +64,61 @@ public class Movement : MonoBehaviour
         float xRaw = Input.GetAxisRaw("Horizontal");
         float yRaw = Input.GetAxisRaw("Vertical");
         Vector2 dir = new Vector2(x, y);
+
+
+        if(isSpawning)
+        {
+            
+            if (anim.spawnComplete)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                isSpawning = false;
+                canMove = true;
+            }
+            
+
+            transform.position = spawnPosition;
+            return;
+        }
+
+
+        if(isDying)
+        {
+            if(anim.deathComplete)
+            {
+                isDying = false;
+                isSpawning = true;
+                GameObject startingPoint = GameObject.Find("StartingPoint");
+                transform.position = startingPoint.transform.position;
+                spawnPosition = transform.position;
+            }
+            else
+            {
+                transform.position = deathPosition;
+            }
+
+            return;
+        }
+
+        if (coll.onSpikes)
+        {
+            canMove = false;
+            isDying = true;
+            deathPosition = transform.position;
+            anim.SetHorizontalMovement(x, y, 0);
+
+            return;
+        }
+
+        Vector2 screenPostion = Camera.main.WorldToScreenPoint(transform.position);
+        if (screenPostion.y < 0)
+        {
+            canMove = false;
+            isDying = true;
+            deathPosition = transform.position;
+            anim.SetHorizontalMovement(x, y, 0);
+            return;
+        }
 
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);

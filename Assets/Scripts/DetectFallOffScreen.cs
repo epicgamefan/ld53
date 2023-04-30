@@ -17,8 +17,8 @@ public class DetectFallOffScreen : MonoBehaviour
         Vector2 screenPostion = Camera.main.WorldToScreenPoint(transform.position);
         if (screenPostion.y < 0)
         {
-            GameObject startingPoint = GameObject.Find("StartingPoint");
-            transform.position = startingPoint.transform.position;
+            //GameObject startingPoint = GameObject.Find("StartingPoint");
+            //transform.position = startingPoint.transform.position;
             
         }
 
