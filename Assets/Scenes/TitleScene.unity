@@ -752,7 +752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0adb000d28658e34aa44cec8e90ee4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: GameScene
+  NextScene: IntroScene
 --- !u!4 &1733079117
 Transform:
   m_ObjectHideFlags: 0
