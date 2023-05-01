@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 3
-  NextScene: Win2Scene
+  NextScene: GameScene
 --- !u!4 &1031750699
 Transform:
   m_ObjectHideFlags: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5178b334bd985b143a232e17be1ac666, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d615064a804b8e040ab05f5f89ee8171, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
