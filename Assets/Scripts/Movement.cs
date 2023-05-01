@@ -74,6 +74,7 @@ public class Movement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 isSpawning = false;
                 canMove = true;
+                hasDashed = false;
             }
             
 
@@ -103,13 +104,15 @@ public class Movement : MonoBehaviour
         if (coll.onSpikes)
         {
             canMove = false;
+            wallGrab = false;
+            wallSlide = false;
+            isDashing = false;
             isDying = true;
             deathPosition = transform.position;
             GameObject startingPoint = GameObject.Find("StartingPoint");
             Debug.Log("Postion: " + startingPoint.transform.position);
             spawnPosition = startingPoint.transform.position;
             anim.SetHorizontalMovement(x, y, 0);
-
             return;
         }
 
@@ -129,19 +132,19 @@ public class Movement : MonoBehaviour
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
-        if (coll.onWall && Input.GetButton("Fire3") && canMove)
-        {
-           if(side != coll.wallSide)
-               anim.Flip(side*-1);
-            wallGrab = true;
-            wallSlide = false;
-        }
+        //if (coll.onWall && Input.GetButton("Fire3") && canMove)
+        //{
+        //   if(side != coll.wallSide)
+        //       anim.Flip(side*-1);
+        //    wallGrab = true;
+        //    wallSlide = false;
+        //}
 
-        if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove)
-        {
-            wallGrab = false;
-            wallSlide = false;
-        }
+        //if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove)
+        //{
+        //    wallGrab = false;
+        //    wallSlide = false;
+        //}
 
         if (coll.onGround && !isDashing)
         {
