@@ -352,6 +352,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1184066001}
+    - target: {fileID: 2209378612320774512, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
+      propertyPath: m_ScreenX
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
 --- !u!1001 &372460950
@@ -567,6 +571,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1184066001}
+    - target: {fileID: 2209378612320774512, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
+      propertyPath: m_ScreenX
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
 --- !u!1 &519420028
@@ -11621,6 +11629,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1184066001}
+    - target: {fileID: 2209378612320774512, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
+      propertyPath: m_ScreenX
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
 --- !u!1001 &1746521741
@@ -11694,6 +11706,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1184066001}
+    - target: {fileID: 2209378612320774512, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
+      propertyPath: m_ScreenX
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
 --- !u!1 &1794089889
@@ -14681,6 +14697,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1184066001}
+    - target: {fileID: 2209378612320774512, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
+      propertyPath: m_ScreenX
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
 --- !u!1 &2044324404
@@ -14868,6 +14888,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1184066001}
+    - target: {fileID: 2209378612320774512, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
+      propertyPath: m_ScreenX
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 057b6c656b9a92c46a3d7d17934b64ff, type: 3}
 --- !u!1001 &2209378610902266576
