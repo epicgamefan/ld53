@@ -41,6 +41,9 @@ TagManager:
   - name: Background
     uniqueID: 2447241719
     locked: 0
+  - name: Signs
+    uniqueID: 1110379659
+    locked: 0
   - name: PointLight
     uniqueID: 3467806977
     locked: 0
