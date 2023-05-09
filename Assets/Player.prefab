@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -827160319
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fbbf1c25496147840acd8dd102d852cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -216,6 +216,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8505222471353351627}
   - component: {fileID: 8505222471353351625}
+  - component: {fileID: 7660311337688797645}
+  - component: {fileID: 1184066008}
   - component: {fileID: 8505222471353351616}
   - component: {fileID: 8505222471353351630}
   - component: {fileID: 8505222471353351629}
@@ -267,8 +269,70 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!61 &7660311337688797645
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8505222471353351624}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: -0.18306267}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5011997, y: 1.150327}
+  m_EdgeRadius: 0
+--- !u!66 &1184066008
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8505222471353351624}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 7660311337688797645}
+    m_ColliderPaths:
+    - - X: 2505998
+        Y: 3921008
+      - X: -2505998
+        Y: 3921008
+      - X: -2505998
+        Y: -7582261
+      - X: 2505998
+        Y: -7582261
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.2505705, y: -0.7582261}
+      - {x: 0.2505705, y: 0.3921008}
+      - {x: -0.2505998, y: 0.39207152}
+      - {x: -0.2505705, y: -0.7582261}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
 --- !u!70 &8505222471353351616
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -276,7 +340,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8505222471353351624}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -299,7 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   speed: 7
-  jumpForce: 12
+  jumpForce: 14
   slideSpeed: 1
   wallJumpLerp: 5
   dashSpeed: 50
@@ -340,10 +404,18 @@ MonoBehaviour:
   onLeftWall: 0
   wallSide: 0
   onSpikes: 0
-  collisionRadius: 0.25
-  bottomOffset: {x: 0, y: -0.56}
-  rightOffset: {x: 0.2, y: -0.33}
-  leftOffset: {x: -0.2, y: -0.33}
+  showLeftGizmo: 1
+  showRightGizmo: 1
+  showBottomGizmo: 0
+  showSpikesGizmo: 0
+  leftBoxOffset: {x: -0.16, y: -0.18}
+  leftBoxSize: {x: 0.2, y: 1.14}
+  rightBoxOffset: {x: 0.16, y: -0.18}
+  rightBoxSize: {x: 0.2, y: 1.14}
+  bottomBoxOffset: {x: 0, y: -0.66}
+  bottomBoxSize: {x: 0.49, y: 0.2}
+  spikesBoxOffset: {x: 0, y: -0.2}
+  spikesBoxSize: {x: 0.45, y: 1}
 --- !u!114 &8505222471353351631
 MonoBehaviour:
   m_ObjectHideFlags: 0
