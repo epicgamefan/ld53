@@ -21,7 +21,7 @@ public class ChangeToFinalMusic : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            FindObjectOfType<AudioManager>().PlayMusic("Final");
+            AudioManager.Instance.PlayMusic("Final");
             Destroy(gameObject);
         }
     }

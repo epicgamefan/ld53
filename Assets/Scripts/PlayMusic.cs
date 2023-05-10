@@ -9,7 +9,7 @@ public class PlayMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<AudioManager>().PlayMusic(music);
+        AudioManager.Instance.PlayMusic(music);
     }
 
     // Update is called once per frame

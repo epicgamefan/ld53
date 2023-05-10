@@ -103,7 +103,7 @@ public class Movement : MonoBehaviour
 
         if (coll.onSpikes)
         {
-            FindObjectOfType<AudioManager>().PlaySound("Death");
+            AudioManager.Instance.PlaySound("Death");
             canMove = false;
             wallGrab = false;
             wallSlide = false;
@@ -184,7 +184,7 @@ public class Movement : MonoBehaviour
         {
 
             anim.SetTrigger("jump");
-            FindObjectOfType<AudioManager>().PlaySound("Jump");
+            AudioManager.Instance.PlaySound("Jump");
 
             if (coll.onGround)
                 Jump(Vector2.up, false);
@@ -236,7 +236,7 @@ public class Movement : MonoBehaviour
         side = anim.sr.flipX ? -1 : 1;
 
         jumpParticle.Play();
-        FindObjectOfType<AudioManager>().PlaySound("Land");
+        AudioManager.Instance.PlaySound("Land");
     }
 
     private void Dash(float x, float y)
@@ -248,7 +248,7 @@ public class Movement : MonoBehaviour
         hasDashed = true;
 
         anim.SetTrigger("dash");
-        FindObjectOfType<AudioManager>().PlaySound("Dash");
+        AudioManager.Instance.PlaySound("Dash");
 
         rb.velocity = Vector2.zero;
         Vector2 dir = new Vector2(x, y);

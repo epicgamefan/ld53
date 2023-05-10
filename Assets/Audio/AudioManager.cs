@@ -6,28 +6,30 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
+    //public static AudioManager instance;
 
     public Sound[] Sounds;
     public Sound[] Music;
     private Sound _currentMusic;
-    private static AudioManager _instance;
+    public static AudioManager Instance;
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);//Keep between scenes.
+       
 
-        if (_instance == null)//Prevents duplication when entering a new scene.
+        if (Instance != null)//Prevents duplication when entering a new scene.
         {
-            _instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
+            if (Instance.gameObject != this.gameObject)
+            {
+                Destroy(this.gameObject);
+                return;
+            }
         }
 
-        foreach(Sound s in Sounds)
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);//Keep between scenes.
+
+        foreach (Sound s in Sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
