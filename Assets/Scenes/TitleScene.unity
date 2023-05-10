@@ -795,6 +795,7 @@ GameObject:
   - component: {fileID: 1733079117}
   - component: {fileID: 1733079116}
   - component: {fileID: 1733079118}
+  - component: {fileID: 1733079119}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -843,6 +844,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: Title
+--- !u!114 &1733079119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733079115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83618349cddf79042977509b20e01709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstButtonSelected: {fileID: 1840960177}
+  menuButtons:
+  - {fileID: 1840960177}
+  - {fileID: 1715575345}
+  cancelAndSwapButtons: []
+  lastSelectedButton: {fileID: 0}
 --- !u!1 &1788669630
 GameObject:
   m_ObjectHideFlags: 0
