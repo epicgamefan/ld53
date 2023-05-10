@@ -16,6 +16,7 @@ public class SceneChange : MonoBehaviour
 
     public void StartGame()
     {
+        DeathCounter.Instance.Reset();
         SceneManager.LoadScene(NextScene);
     }
 

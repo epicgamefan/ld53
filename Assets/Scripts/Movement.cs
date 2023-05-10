@@ -87,6 +87,7 @@ public class Movement : MonoBehaviour
         {
             if(anim.deathComplete)
             {
+                DeathCounter.Instance.Increment();
                 isDying = false;
                 isSpawning = true;
 
