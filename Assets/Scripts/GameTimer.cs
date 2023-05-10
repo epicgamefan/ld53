@@ -47,9 +47,13 @@ public class GameTimer : MonoBehaviour
         return String.Format("{0:00}:{1:00}:{2:00}.{3:00}", hours,minutes, seconds, hundredths);
     }
 
-    public void StartTimer()
+    public void ResetTimer()
     {
         elapsedTime = 0;
+    }
+
+    public void StartTimer()
+    {
         running = true;
     }
 
