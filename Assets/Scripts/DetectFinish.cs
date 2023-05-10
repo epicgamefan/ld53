@@ -10,7 +10,7 @@ public class DetectFinish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameTimer.Instance.StartTimer();
     }
 
     // Update is called once per frame
@@ -23,6 +23,7 @@ public class DetectFinish : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameTimer.Instance.StopTimer();
             SceneManager.LoadScene(NextScene);
         }
     }
